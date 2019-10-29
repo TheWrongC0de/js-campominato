@@ -8,8 +8,50 @@
 
 //genero 16 numeri casuali da 1 a 100
 
-for (var i = 0; i < 100; i++) {
-  var numScelti = Math.floor(Math.random()*16)+1;
-  console.log(numScelti);
+var numeri = [];
 
+while (numeri.lenght < 16) { //riga da 16
+  var numPc = getRandomInt(1, 101); // genero numero casuale da 1 a 100
+  //controllo per numero random
+  var found = inArray (numPc, numeri); //controllo
+  if (found == false) { //se non c'è
+    numeri.push(numPc); //pusha
+  }
 }
+console.log(numeri);
+
+
+function inArray(value, array) {
+  var i = false;
+  var i = 0;
+  while (found == false && i < array.lenght) {
+    if (array[i]) == value) {
+      found = true;
+    }
+    i++
+  }
+   return found;
+}
+
+//creare funzione getRandomInt
+
+
+
+//for (var i = 0; i < 16; i++) { //per 16 volte
+  //var numPc = getRandomInt(1, 101); //genero un numero da 1 100
+  //controllo per numero random
+//}
+
+
+//Chiedo all'utente di inserire un numero da 1 a 100 alla volta
+//var numUtente = parseInt(prompt("Inserisci un numero da 1 a 100"))
+
+//se il numero è presente nella lista dei numeri generati, la partita termina
+//if (numUtente == numPc) {
+  //var fine = alert ("la partita è terminata")
+
+//}
+//altrimenti continua chiedendo all’utente un altro numero.
+//else {
+  //numUtente;
+//}
